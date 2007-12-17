@@ -17,7 +17,6 @@ Buildrequires:  perl-devel
 %endif
 BuildArch:      noarch
 BuildRequires:  perl(MIME::Charset)
-BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 Fellow Americans, you probably won't know what the hell this module is for.
