@@ -1,6 +1,6 @@
 %define module  MIME-EncWords
 %define name    perl-%{module}
-%define version 1.010.1
+%define version 1.010.101
 %define up_version  0.040
 %define release %mkrel 1
 
