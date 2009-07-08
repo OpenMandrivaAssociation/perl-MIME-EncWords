@@ -1,30 +1,29 @@
-%define module  MIME-EncWords
-%define name    perl-%{module}
-%define version 1.011.1
-%define up_version  0.040
-%define release %mkrel 1
+%define upstream_name     MIME-EncWords
+%define upstream_version  1.011.1
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release}
+Name:           perl-%{upstream_name}
+Version:        %perl_convert_version %{upstream_version}
+Release:        %mkrel 1
+
 Summary:        Deal with RFC-1522 encoded words (improved)
-License:        GPL or Artistic
+License:        GPL+ or Artistic
 Group:          Development/Perl
-URL:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/MIME/%{module}-%{up_version}.tar.bz2
+URL:            http://search.cpan.org/dist/%{upstream_name}
+Source0:        http://www.cpan.org/modules/by-module/MIME/%{upstream_name}-%{upstream_version}.tar.gz
+
 %if %{mdkversion} < 1010
 Buildrequires:  perl-devel
 %endif
-BuildArch:      noarch
 BuildRequires:  perl(MIME::Charset)
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildArch:      noarch
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Fellow Americans, you probably won't know what the hell this module is for.
 Europeans, Russians, et al, you probably do. :-)
 
 %prep
-%setup -q -n %{module}-%{up_version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
