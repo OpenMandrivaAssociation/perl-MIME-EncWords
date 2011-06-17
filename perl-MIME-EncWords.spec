@@ -1,9 +1,9 @@
 %define upstream_name     MIME-EncWords
-%define upstream_version 1.012
+%define upstream_version 1.012.3
 
 Name:           perl-%{upstream_name}
 Version:        %perl_convert_version %{upstream_version}
-Release:        %mkrel 3
+Release:        %mkrel 1
 Epoch:          1
 
 Summary:        Deal with RFC-1522 encoded words (improved)
@@ -11,10 +11,6 @@ License:        GPL+ or Artistic
 Group:          Development/Perl
 URL:            http://search.cpan.org/dist/%{upstream_name}
 Source0:        http://www.cpan.org/modules/by-module/MIME/%{upstream_name}-%{upstream_version}.tar.gz
-
-%if %{mdkversion} < 1010
-Buildrequires:  perl-devel
-%endif
 BuildRequires:  perl(MIME::Charset)
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
@@ -44,6 +40,5 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc ARTISTIC GPL README
 %{perl_vendorlib}/MIME
+%{perl_vendorlib}/Encode
 %{_mandir}/*/*
-
-
