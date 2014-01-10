@@ -36,5 +36,7 @@ make test
 %{perl_vendorlib}/MIME
 %{perl_vendorlib}/Encode
 %{_mandir}/man3/*
+%{_libdir}/perl5/vendor_perl/5.16.3/POD2/JA/Encode/MIME/EncWords.pod
+%{_libdir}/perl5/vendor_perl/5.16.3/POD2/JA/MIME/EncWords.pod
 
 
