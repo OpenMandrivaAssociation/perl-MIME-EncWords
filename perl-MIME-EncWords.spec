@@ -35,8 +35,8 @@ make test
 %doc ARTISTIC GPL README
 %{perl_vendorlib}/MIME
 %{perl_vendorlib}/Encode
+%{perl_vendorlib}/POD2/JA/Encode
+%{perl_vendorlib}/POD2/JA/MIME
 %{_mandir}/man3/*
-%{_libdir}/perl5/vendor_perl/5.16.3/POD2/JA/Encode/MIME/EncWords.pod
-%{_libdir}/perl5/vendor_perl/5.16.3/POD2/JA/MIME/EncWords.pod
 
 
