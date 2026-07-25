@@ -1,15 +1,15 @@
 %define modname	MIME-EncWords
-%define modver 1.014.3
+%define modver v1.015.0
 
 Summary:	Deal with RFC-1522 encoded words (improved)
 Name:		perl-%{modname}
 Epoch:		1
-Version:	%perl_convert_version %{modver}
-Release:	5
+Version:	%{modver}
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/MIME/%{modname}-%{modver}.tar.gz
+Url:		https://metacpan.org/dist/MIME-EncWords
+Source0:	https://cpan.metacpan.org/authors/id/N/NE/NEZUMI/MIME-EncWords-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl(Test::More)
