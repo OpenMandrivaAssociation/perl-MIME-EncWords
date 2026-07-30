@@ -6,7 +6,7 @@ Summary:	Deal with RFC-1522 encoded words (improved)
 Name:		perl-%{modname}
 Epoch:		1
 Version:	1.015.0
-Release:	2
+Release:	3
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/MIME-EncWords
@@ -26,7 +26,7 @@ Europeans, Russians, et al, you probably do. :-)
 %setup -qn %{modname}-%{modver} -n MIME-EncWords-1.015.0
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
